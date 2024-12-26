@@ -1,31 +1,31 @@
 # PS Store Deals Telegram Bot
 
-## Описание
+## Description
 
-Это приложение представляет собой Telegram-бота, который предоставляет информацию о скидках на игры в PlayStation Store. Бот позволяет пользователям просматривать скидки, фильтруя их по процентному порогу, и получать подробную информацию об играх, включая дату окончания предложения.
+This application is a Telegram bot that provides information about discounts on games on the PlayStation Store. The bot allows users to browse discounts by filtering them by a percentage threshold and get detailed information about the games, including the offer end date.
 
-## Как запустить
+## How to launch
 
-### Предварительные требования
+### Pre-requisites
 
-1.  **Python 3.10 или более поздняя версия:** Убедитесь, что у вас установлен Python 3.10 или более поздняя версия. Вы можете скачать нужную версию с [официального сайта Python](https://www.python.org/downloads/).
-2.  **Git:** (Опционально) Если вы будете клонировать репозиторий с GitHub, вам понадобится Git.
+1.  **Python 3.10 or later**: Make sure you have Python 3.10 or later installed. You can download the correct version from the [official Python website](https://www.python.org/downloads/).
+2.  **Git:** (Optional) If you will be cloning a repository from GitHub, you will need Git.
 
-### Установка
+### Installation
 
-1.  **Клонируйте репозиторий (или скачайте архив):**
+1.  **Clone the repository (or download the archive):**
 
     ```bash
     git clone https://github.com/UnWreckerNick/PSStoreDealsTG/
     cd <папка репозитория>
     ```
 
-2.  **Создайте виртуальное окружение:**
+2.  **Create a virtual environment:**
 
     ```bash
     python -m venv .venv
     ```
-3.  **Активируйте виртуальное окружение:**
+3.  **Activate the virtual environment:**
 
     *   **Windows:**
 
@@ -37,61 +37,56 @@
         ```bash
         source .venv/bin/activate
         ```
-4.  **Установите зависимости:**
+4.  **Install the dependencies:**
 
     ```bash
     pip install -r requirements.txt
     ```
-    Если файла `requirements.txt` нет, то нужно запустить следующую команду в папке проекта:
-     ```bash
-     pip install aiogram==2.25.2 beautifulsoup4 requests pipreqs
-     pipreqs .
-     ```
-     и потом еще раз установить зависимсти.
-5.  **Создайте файл `.env`:**
-     В корневой директории вашего проекта создайте файл `.env`.
-6.  **Добавьте токен телеграм-бота в `.env`:**
-    В файле `.env` добавьте строку:
+    
+5.  **Create file `.env`:**
+     In the root directory of your project, create an `.env`.
+6.  **Add the telegram bot token to the `.env`:**
+    In the `.env` file, add the line::
 
     ```dotenv
     API_TOKEN=ВАШ_ТОКЕН_БОТА
     ```
 
-    Замените `ВАШ_ТОКЕН_БОТА` на фактический токен вашего Telegram-бота. Вы можете получить токен, создав бота у [@BotFather](https://t.me/botfather) в Telegram.
+    Replace `YOUR_BOT_TOKEN` token with the actual token of your Telegram bot. You can get the token by creating a bot from [@BotFather](https://t.me/botfather)  in Telegram.
     
-8.  **Запустите парсер:**
+8.  **Run the parser:**
     ```bash
-    python <путь к вашему файлу парсера>/app/parser.py
+    python <path to your parser file>/app/parser.py
     ```
-    Замените `<путь к вашему файлу бота>/app/parser.py` на путь до вашего файла с кодом.
+    Replace  `<path to your parser file>/app/parser.py` with the path to your code file.
     
-9.  **Запустите бота после завершения парсинга:**
+9.  **Run the bot after the parsing is complete:**
     ```bash
-    python <путь к вашему файлу бота>/app/app.py
+    python <path to your bot file>/app/app.py
     ```
-    Замените `<путь к вашему файлу бота>/app/app.py` на путь до вашего файла с кодом.
+    Replace `<path to your bot file>/app/app.py` with the path to your code file.
 
-### Как использовать
+### How to use
 
-После запуска бота в Telegram:
+After launching the bot in Telegram:
 
-1.  Введите команду `/start`, чтобы начать работу с ботом.
-2.  Введите команду `/discounts`, чтобы просмотреть доступные скидки.
-3.  Выберите уровень скидки, который вас интересует (например, "50% и выше") или "Случайные игры".
-4.  Бот покажет список игр с соответствующей скидкой, с возможностью навигации по страницам.
-5.  Для каждой игры есть кнопки "Подробнее" и "Открыть в PSN Store".
+1. Enter the `/start` command to start the bot.
+2. Enter the `/discounts` command to view the available discounts.
+3. Select the discount level you are interested in (e.g. “50% and above”) or “Random Games”.
+4. The bot will show a list of games with the appropriate discount, with the ability to navigate through the pages.
+5. For each game, there are “Read More” and “Open in PSN Store” buttons.
 
-### Зависимости
+### Dependencies
 
-Список всех зависимостей находится в файле `requirements.txt`.
+A list of all dependencies can be found in the `requirements.txt` file.
 
-* `aiogram`: Библиотека для создания Telegram-ботов.
-* `beautifulsoup4`: Библиотека для парсинга HTML и XML.
-* `requests`: Библиотека для HTTP-запросов.
-* `python-dotenv`: Библиотека для работы с файлами `.env`
+* `aiogram`: Library for creating Telegram bots.
+* `beautifulsoup4`: Library for HTML and XML parsing.
+* `requests`: Library for HTTP requests.
+* `python-dotenv`: A library for `.env` files.
 
-### Примечания
+### Notes
 
-*   Этот бот предназначен для просмотра скидок, он не является официальным приложением PlayStation.
-*   Для работы бота необходимо подключение к Интернету.
-*   Даты и время окончания акций могут отличаться от реальных значений.
+*   This bot is intended for viewing discounts, it is not an official PlayStation application.
+*   An internet connection is required for the bot to work.
+*   Dates and end times of promotions may differ from actual values.
