@@ -17,7 +17,7 @@ This application is a Telegram bot that provides information about discounts on 
 
     ```bash
     git clone https://github.com/UnWreckerNick/PSStoreDealsTG/
-    cd <папка репозитория>
+    cd <repo folder>
     ```
 
 2.  **Create a virtual environment:**
@@ -49,7 +49,7 @@ This application is a Telegram bot that provides information about discounts on 
     In the `.env` file, add the line::
 
     ```dotenv
-    API_TOKEN=ВАШ_ТОКЕН_БОТА
+    API_TOKEN=YOUR_BOT_TOKEN
     ```
 
     Replace `YOUR_BOT_TOKEN` token with the actual token of your Telegram bot. You can get the token by creating a bot from [@BotFather](https://t.me/botfather)  in Telegram.
